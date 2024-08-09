@@ -1,0 +1,27 @@
+{
+	"$schema": "https://schemas.wp.org/trunk/block.json",
+	"apiVersion": 3,
+	"name": "carlansell94/link-list",
+	"version": "0.1.0",
+	"title": "Link List",
+	"category": "widgets",
+	"icon": "admin-links",
+	"description": "A block to display a list of links, with custom titles, descriptions and icons.",
+	"attributes": {
+		"links": {
+			"type": "array",
+			"default": []
+		},
+		"alternateStyle": {
+			"type": "boolean",
+			"default": true
+		}
+	},
+	"supports": {
+		"html": false
+	},
+	"textdomain": "qb-link-list",
+	"editorScript": "file:./index.js",
+	"editorStyle": "file:./index.css",
+	"style": "file:./style-index.css"
+}

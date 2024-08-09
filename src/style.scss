@@ -1,0 +1,33 @@
+.link-list-post-list {
+	display: flex;
+	flex-direction: column;
+	grid-gap: 1rem;
+	margin: 5rem 4rem 2rem;
+}
+
+.link-list-post-container > a {
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+	padding: 2rem 0;
+	gap: 4rem;
+	text-align: center;
+	border-top: 2px solid #555;
+}
+
+.link-list-post-container > a > img {
+	max-width: 80%;
+	margin: auto;
+	width: 100%;
+	height: auto;
+	max-height: 20vh;
+}
+
+.link-list-post-container > a > div {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+}
+
+.link-list-post-container-alt:nth-child(even) > a > div {
+	order: -1;
+}
