@@ -16,8 +16,6 @@ import metadata from './block.json';
 
 const Edit = ( { attributes, setAttributes } ) => {
 	const { links } = attributes;
-
-	// Temporary state for new record input
 	const [ newIcon, setNewIcon ] = useState( '' );
 	const [ newTitle, setNewTitle ] = useState( '' );
 	const [ newDescription, setNewDescription ] = useState( '' );
@@ -181,7 +179,7 @@ registerBlockType( metadata.name, {
 						}` }
 						key={ index }
 					>
-						<a href={ record.url }>
+						<a href={ record.url.url }>
 							{ record.icon ? (
 								<img src={ record.icon } alt={ record.title } />
 							) : (
