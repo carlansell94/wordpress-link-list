@@ -46,6 +46,7 @@ const Edit = ( { attributes, setAttributes } ) => {
 		<div { ...useBlockProps() }>
 			<InspectorControls>
 				<PanelBody title="Block Settings">
+					<p className="link-list-note">Note: Block settings do not apply inside the editor</p>
 					<ToggleControl
 						label={ __(
 							'Alternate icon position',
@@ -57,6 +58,11 @@ const Edit = ( { attributes, setAttributes } ) => {
 								alternateStyle: ! attributes.alternateStyle,
 							} )
 						}
+					/>
+					<ToggleControl
+						label={ __('Show borders', 'qb-link-list')}
+						checked={ attributes.showBorders }
+						onChange={ () => setAttributes({showBorders: !attributes.showBorders})}
 					/>
 				</PanelBody>
 			</InspectorControls>
@@ -179,7 +185,11 @@ registerBlockType( metadata.name, {
 						}` }
 						key={ index }
 					>
-						<a href={ record.url.url }>
+						<a href={ record.url.url } className={ `${
+							attributes.showBorders
+								? 'border'
+								: ''
+						}` }>
 							{ record.icon ? (
 								<img src={ record.icon } alt={ record.title } />
 							) : (

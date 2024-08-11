@@ -33,9 +33,40 @@
 	grid-gap: 1rem;
 	grid-template-columns: 200px 1fr 40px;
 	align-items: center;
-	border: 1px solid #000;
+	border-top: 1px solid #555;
+	border-bottom: 1px solid #555;
 }
 
 .link-list-post-selector-block-list-container > div > p {
 	text-align: center;
+}
+
+.block-editor-link-control__search-results-wrapper {
+	background-color: #fafafa;
+	border-radius: 0 0 1rem 1rem;
+	margin-top: 1rem;
+}
+
+.block-editor-link-control__search-item.is-current {
+	background-color: #fafafa;
+	border-radius: 1rem;
+	padding: 1rem 0;
+	margin: 1rem 0;
+}
+
+.link-list-note {
+	font-size: 11px;
+	font-style: italic;
+	margin-bottom: 2rem;
+}
+
+
+@media (max-width: 992px) {
+	.link-list-post-selector-block-new {
+		grid-template-columns: 1fr;
+	}
+	
+	.link-list-post-selector-block-list-container > div {
+		line-break: anywhere;
+	}
 }
